@@ -1,15 +1,3 @@
-/* body {
-  margin: 0;
-  padding: 0;
-  background-color: #f8f8f8;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; /* Center content properly 
-  min-height: 100vh; /* Ensure it takes full screen height 
-  */
-
 .hero-container {
   display: flex;
   background-color: #4caf50;

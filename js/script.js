@@ -45,33 +45,6 @@ showSlide(currentSlide);
 
 const headerPosts = document.querySelector(".headercards");
 
-// const headerPostsCards = () => {
-//   const updateSlider = () => {
-//     headerPosts.innerHTML = "";
-//     for (let i = currentSlide; i < currentSlide + 6; i++) {
-//       const post = posts[i % posts.length];
-//       const postElement = document.createElement("a");
-//       postElement.classList.add("headercard");
-//       postElement.classList.add("flex");
-//       postElement.href = `${post.link}`;
-//       postElement.innerHTML = `
-//              <img src="${post.bgImg}" />
-
-//             <div class="hcardinfo">
-//               <span>${post.label}</span>
-//               <h3>${post.title}</h3>`;
-
-//       headerPosts.appendChild(postElement);
-//     }
-//   };
-
-//   //initialize the slider
-
-//   updateSlider();
-// };
-
-// headerPostsCards();
-
 function nextSlide() {
   currentSlide = (currentSlide + 1) % posts.length;
   showSlide(currentSlide);
