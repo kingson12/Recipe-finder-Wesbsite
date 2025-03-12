@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/darkmode.css" />
+    <link rel="stylesheet" href="css/recipe.css" />
+    <link rel="stylesheet" href="css/todo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <div class="topnav">
+        <div class="container flex">
+          <div class="navicons flex">
+            <a href="/"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="/"><i class="fa-brands fa-twitter"></i></a>
+            <a href="/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="/"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <a href="/" class="srbtn mail-1"
+            ><div class="user-profile">
+              <span class="username">Hello, Emma!</span>
+              <img
+                src="images/profile-pics.jpg"
+                alt="User Profile"
+                class="profile-pic"
+              /></div
+          ></a>
+        </div>
+      </div>
+
+      <div class="mainnav">
+        <div class="container flex">
+          <div class="logo flex">
+            <img src="images/logo.png" />
+            <h1>Recipe Blog</h1>
+          </div>
+          <ul class="navlist flex">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="todo.html" class="active">Recipe To-Do</a></li>
+            <li><a href="Recipe.html">Find-Recipes</a></li>
+            <li><a href="/">Contact Us</a></li>
+          </ul>
+          <div class="searchbar">
+            <a href="Recipe.html"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></a>
+            <div class="navonoff">
+              <input type="checkbox" id="checkbox2" />
+              <label for="checkbox2" class="toggle2">
+                <div class="bar bar--top"></div>
+                <div class="bar bar--middle"></div>
+                <div class="bar bar--bottom"></div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="todo-big--container">
+      <div class="todo-name">
+        <h1>Plan Your Meals, Stay Organized!</h1>
+        <p>
+          Easily manage your cooking plans with our Recipe Planner. Add meals to
+          your list, track what you've cooked, and keep an eye on what’s next.
+          Whether it's a new recipe you’re excited to try or a go-to favorite,
+          stay organized with just a few clicks!
+        </p>
+      </div>
+    </div>
+
+    <div class="todo-display-result">
+      <form>
+        <input
+          type="text"
+          class="todo-input"
+          placeholder="Search Ingredient here "
+        />
+        <button class="todo-button" type="submit">
+          <i class="fas fa-plus-square"></i>
+        </button>
+        <div class="select">
+          <select name="todo" class="filter-todo">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">Uncompleted</option>
+          </select>
+        </div>
+      </form>
+
+      <div class="todo-container">
+        <ul class="todo-list"></ul>
+      </div>
+    </div>
+
+    <footer class="recipe-footer">
+      <div class="container flex">
+        <div class="footer flex">
+          <div class="footerlogo">
+            <h1>Recipe Blog</h1>
+            <p>
+              I provide new recipes with a twist on daily basis. I also post
+              blog posts about fun ideas to do in the kitchen
+            </p>
+            <div class="fsocial">
+              <a href="" target="_blank"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="" target="_blank"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+
+              <a href="" target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+
+              <a href="" target="_blank"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footernav">
+            <h3>Recipes</h3>
+            <ul class="flex">
+              <li><a href="/">Breakfast</a></li>
+              <li><a href="/">Desert</a></li>
+              <li><a href="/">Dinner</a></li>
+              <li><a href="/">Diary</a></li>
+            </ul>
+          </div>
+
+          <div class="footernav">
+            <h3>Legal</h3>
+            <ul class="flex">
+              <li><a href="/">Privacy Policy</a></li>
+              <li><a href="/">Refund Policy</a></li>
+              <li><a href="/">Cookie Policy</a></li>
+              <li><a href="/">Terms and Condition</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex">
+          <h5>&copy; 2023 Recipe Blog All Rights Reserved</h5>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/todo.js"></script>
+  </body>
+</html>

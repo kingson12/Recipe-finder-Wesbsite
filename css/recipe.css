@@ -1,0 +1,266 @@
+/* body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content properly 
+  min-height: 100vh; /* Ensure it takes full screen height 
+  */
+
+.hero-container {
+  display: flex;
+  background-color: #4caf50;
+  columns: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px 100px 20px;
+  margin-bottom: 20px;
+}
+
+.hero-container h1 {
+  font-size: 2rem;
+  color: white;
+}
+
+.hero-container p {
+  margin-top: 10px;
+  width: 40%;
+  font-size: 1rem;
+  font-weight: 300;
+  color: white;
+}
+
+.hero-search-container {
+  margin: 20px 0;
+}
+
+input {
+  padding: 10px;
+  width: 300px;
+  border: 2px solid #ff9800;
+  border-radius: 4px;
+  outline: none;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #ff9800;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 10px;
+  max-width: 1100px; /*optional for better */
+  margin: auto;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px;
+  font-size: 1.2rem;
+}
+
+button.get-recipe {
+  margin: 10px;
+  padding: 8px 16px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.get-recipe:hover {
+  background-color: #ff9800;
+}
+
+/* Loading Spinner*/
+
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #ff9800;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  z-index: 1000;
+  display: flex; /* Ensure it's centered */
+  align-items: center;
+  justify-content: center;
+}
+
+.loading.hidden {
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+input.error {
+  border: 2px solid red;
+  animation: shake 0.5s;
+}
+
+/* input field shake Animation*/
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-10px);
+  }
+
+  40%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  padding-top: 90px;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .result-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.recipe-text {
+  text-align: left;
+  padding: 0 10px 0 0;
+  margin: 10px 0;
+  line-height: 1.5;
+  color: #555;
+  height: 86%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.popup-content {
+  position: relative;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  width: 80%;
+  height: 80%;
+  /* overflow: scroll; */
+  max-width: 500px;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 5px 13px;
+}
+
+.close-btn:hover {
+  background-color: darkred;
+}
+
+/* Suggestion box container */
+.suggestions {
+  position: absolute;
+  background: rgb(221, 215, 201);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  left: 530px;
+  width: 16%;
+  z-index: 10;
+  display: none;
+}
+
+/* Individual suggestion item */
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Highlight item on hover */
+.suggestion-item:hover {
+  background: #f1f1f1;
+}
+
+/* Show suggestions when available */
+.suggestions.show {
+  display: block;
+}
+
+.recipe-footer {
+  margin-top: 150px;
+}
