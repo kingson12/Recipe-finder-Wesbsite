@@ -5,7 +5,7 @@
 }
 
 .todo-big--container {
-  background: #4caf50;
+  background: #256427;
   padding-top: 50px;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@
 }
 
 .todo-display-result {
-  background-color: #84a584;
+  background-color: #3b503b;
   padding: 40px 0;
   margin-bottom: 40px;
 }
