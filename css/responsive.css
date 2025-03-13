@@ -26,21 +26,32 @@
     background-color: #ffffffd6;
   }
   .headerimg {
-    height: 45vh;
+    height: 70vh;
     padding: 0 20px;
   }
 
+  .meal-two-btn {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+  }
   .headertitle {
     font-size: 30px;
   }
   .headerpera {
+    width: 100%;
     padding-right: 1rem;
   }
   .headerinfo {
     padding: 4rem 20px;
   }
+  .logo {
+    margin-left: 15px;
+  }
   .headerslider {
-    padding: 0 20px;
+    margin-top: -60px;
+    position: relative;
+    padding: 20px 20px;
   }
   .headercard {
     min-width: 100%;
@@ -49,6 +60,10 @@
   .threecards {
     justify-content: center;
     flex-wrap: wrap;
+  }
+  .youradvertise img {
+    width: 300px;
+    src: "images/recipe-1-mobile.jpg";
   }
   .filter {
     flex-wrap: wrap;
@@ -150,5 +165,17 @@
 
   .footernav ul {
     align-items: center;
+  }
+  .youradvertise img {
+    display: none;
+  }
+
+  .youradvertise .small-img {
+    display: inline;
+    width: 338px;
+  }
+
+  .youradvertise {
+    height: 350px;
   }
 }
