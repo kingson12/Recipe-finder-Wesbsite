@@ -80,7 +80,7 @@ header {
 }
 
 .navicons a:hover i {
-  color: var(--main-color);
+  color: #062907;
 }
 
 /* //user profile */
@@ -883,7 +883,7 @@ header {
 
 .catecardbtn {
   position: relative;
-  background-color: #ff6767;
+  background-color: var(--main-color);
   text-transform: uppercase;
   padding: 10px 20px;
   border-radius: 10px;
@@ -965,7 +965,7 @@ header {
 }
 
 .featuredtitles p {
-  max-width: 600px;
+  max-width: 400px;
   text-align: center;
   font-weight: 600;
   font-size: 15px;
@@ -1173,7 +1173,7 @@ header {
   margin: 0 0 20px;
   font-weight: 700;
   color: #1d2228;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 }
 
 .gfinfo p {
@@ -1262,7 +1262,6 @@ header {
   color: #222;
   font-size: 14px;
   font-weight: 700;
-  line-height: 30px;
   max-width: 600px;
   margin-bottom: 20px;
 }
@@ -1300,7 +1299,7 @@ header {
   width: 715px;
 }
 
-.small-img{
+.small-img {
   display: none;
 }
 /* rightsidesec */

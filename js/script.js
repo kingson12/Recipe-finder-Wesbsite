@@ -48,7 +48,7 @@ const headerPosts = document.querySelector(".headercards");
 function nextSlide() {
   currentSlide = (currentSlide + 1) % posts.length;
   showSlide(currentSlide);
-  headerPostsCards(currentSlide);
+  // headerPosts(currentSlide);
 }
 
 // change slide every 3 seconds
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (count < target) {
           counter.innerText = Math.ceil(count + increment);
-          setTimeout(updateCount, 20);
+          setTimeout(updateCount, 60);
         } else {
           counter.innerText = target;
         }
