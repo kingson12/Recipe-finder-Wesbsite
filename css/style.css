@@ -1351,7 +1351,7 @@ header {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   text-align: center;
-  background-color: #9cffa4;
+  background-color: #c1f1c6;
   z-index: 1;
 }
 
@@ -1578,6 +1578,7 @@ footer .container {
 }
 
 .footerlogo p {
+  width: 60%;
   font-size: 14px;
   color: #999;
 }
@@ -1620,4 +1621,10 @@ footer .container {
 
 .footernav ul li a:hover {
   color: var(--main-color);
+}
+
+footer h5 {
+  color: rgba(255, 255, 255, 0.555);
+  font-weight: 400;
+  letter-spacing: 1px;
 }

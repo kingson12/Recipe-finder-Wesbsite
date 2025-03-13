@@ -24,6 +24,71 @@ const posts = [
     bgImg: "images/dish-1.jpg",
     label: "pizza",
   },
+  {
+    title: "Discover & Organize Your Favorite Recipes",
+    desc: " Find delicious recipes in seconds and keep track of your meal ideas effortlessly. Whether you're searching for the perfect dish or planning your next meal, we've got you covered. Explore, cook, and stay organized—all in one place!",
+    bgImg: "images/1.jpg",
+  },
+  {
+    title: "Your Recipe Companion",
+    desc: "Explore a world of flavors and stay organized with ease! Search for mouthwatering recipes and keep track of your meal ideas with our simple-to-use planner. Cooking just got smarter!",
+    bgImg: "images/2.jpg",
+  },
+  {
+    title: "Cook. Plan. Enjoy",
+    desc: "From discovering new recipes to organizing your favorite meals, we make cooking effortless. Find the perfect dish and manage your recipe to-do list seamlessly—all in one place!",
+    bgImg: "images/3.jpg",
+  },
+  {
+    title: "Discover & Organize Your Favorite Recipes",
+    desc: " Find delicious recipes in seconds and keep track of your meal ideas effortlessly. Whether you're searching for the perfect dish or planning your next meal, we've got you covered. Explore, cook, and stay organized—all in one place!",
+    bgImg: "images/4.jpg",
+  },
+  {
+    title: "Your Recipe Companion",
+    desc: "Explore a world of flavors and stay organized with ease! Search for mouthwatering recipes and keep track of your meal ideas with our simple-to-use planner. Cooking just got smarter!",
+    bgImg: "images/5.jpg",
+  },
+  {
+    title: "Cook. Plan. Enjoy",
+    desc: "From discovering new recipes to organizing your favorite meals, we make cooking effortless. Find the perfect dish and manage your recipe to-do list seamlessly—all in one place!",
+    bgImg: "images/6.jpg",
+  },
+  {
+    title: "Discover & Organize Your Favorite Recipes",
+    desc: " Find delicious recipes in seconds and keep track of your meal ideas effortlessly. Whether you're searching for the perfect dish or planning your next meal, we've got you covered. Explore, cook, and stay organized—all in one place!",
+    bgImg: "images/7.jpg",
+  },
+  {
+    title: "Your Recipe Companion",
+    desc: "Explore a world of flavors and stay organized with ease! Search for mouthwatering recipes and keep track of your meal ideas with our simple-to-use planner. Cooking just got smarter!",
+    bgImg: "images/8.jpg",
+  },
+  {
+    title: "Cook. Plan. Enjoy",
+    desc: "From discovering new recipes to organizing your favorite meals, we make cooking effortless. Find the perfect dish and manage your recipe to-do list seamlessly—all in one place!",
+    bgImg: "images/9.jpg",
+  },
+  {
+    title: "Discover & Organize Your Favorite Recipes",
+    desc: " Find delicious recipes in seconds and keep track of your meal ideas effortlessly. Whether you're searching for the perfect dish or planning your next meal, we've got you covered. Explore, cook, and stay organized—all in one place!",
+    bgImg: "images/10.jpg",
+  },
+  {
+    title: "Your Recipe Companion",
+    desc: "Explore a world of flavors and stay organized with ease! Search for mouthwatering recipes and keep track of your meal ideas with our simple-to-use planner. Cooking just got smarter!",
+    bgImg: "images/11.jpg",
+  },
+  {
+    title: "Cook. Plan. Enjoy",
+    desc: "From discovering new recipes to organizing your favorite meals, we make cooking effortless. Find the perfect dish and manage your recipe to-do list seamlessly—all in one place!",
+    bgImg: "images/12.jpg",
+  },
+  {
+    title: "Discover & Organize Your Favorite Recipes",
+    desc: " Find delicious recipes in seconds and keep track of your meal ideas effortlessly. Whether you're searching for the perfect dish or planning your next meal, we've got you covered. Explore, cook, and stay organized—all in one place!",
+    bgImg: "images/13.jpg",
+  },
 ];
 
 let currentSlide = 0;
