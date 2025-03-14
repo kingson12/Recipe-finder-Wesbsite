@@ -23,7 +23,8 @@
   color: white;
 }
 
-.hero-search-container {
+.recipe-hero-search-container {
+  position: relative;
   margin: 20px 0;
 }
 
@@ -224,8 +225,9 @@ input.error {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   max-height: 200px;
   overflow-y: auto;
-  left: 530px;
-  width: 16%;
+  left: 50%; /* Center based on parent */
+  transform: translateX(-50%); /* Adjust to truly center */
+  width: 60%;
   z-index: 10;
   display: none;
 }
