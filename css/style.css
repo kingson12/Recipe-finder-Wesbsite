@@ -39,12 +39,14 @@ li {
   list-style: none;
 }
 
-body {
+body,
+html {
   width: 100%;
   height: auto;
   background-color: #fff;
   transition: 0.4s ease;
   scroll-behavior: smooth;
+  overflow-x: hidden; /* ✅ Prevents horizontal scrolling */
 }
 
 header {

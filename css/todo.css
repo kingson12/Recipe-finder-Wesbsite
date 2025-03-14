@@ -16,6 +16,7 @@
 .todo-name {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 10px;
   margin-top: 3rem;
@@ -31,6 +32,21 @@
   text-align: center;
   width: 45%;
   margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 800px) {
+  .todo-name p {
+    width: 90%;
+  }
+
+  .todo-display-result form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.todo-name h1 {
+  text-align: center;
 }
 
 .todo-display-result {
@@ -78,6 +94,7 @@ form button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 .todo-list {
   min-width: 30%;

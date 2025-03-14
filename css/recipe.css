@@ -1,4 +1,4 @@
-.hero-container {
+.recipe-hero-container {
   display: flex;
   background-color: #256427;
   columns: white;
@@ -10,12 +10,12 @@
   margin-bottom: 40px;
 }
 
-.hero-container h1 {
+.recipe-hero-container h1 {
   font-size: 2rem;
   color: white;
 }
 
-.hero-container p {
+.recipe-hero-container p {
   margin-top: 10px;
   width: 40%;
   font-size: 1rem;
@@ -25,6 +25,12 @@
 
 .hero-search-container {
   margin: 20px 0;
+}
+
+@media screen and (max-width: 800px) {
+  .recipe-hero-container p {
+    width: 90%;
+  }
 }
 
 input {

@@ -1,6 +1,5 @@
 //slider header
 
-//you can also add your data
 const posts = [
   {
     title: "Discover & Organize Your Favorite Recipes",

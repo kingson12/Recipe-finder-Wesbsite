@@ -8,6 +8,19 @@ const recipeTitle = document.getElementById("recipeTitle");
 const recipeDetails = document.getElementById("recipeDetails");
 const loadingSpinner = document.getElementById("loadingSpinner");
 
+//navbar  mobile
+const navdiv = document.querySelector(".navonoff");
+const navtoggle = document.querySelector("#checkbox2");
+const navlist = document.querySelector(".navlist");
+
+navtoggle.addEventListener("change", () => {
+  if (navtoggle.checked) {
+    navlist.style.right = "-150px";
+  } else {
+    navlist.style.right = "-400px";
+  }
+});
+
 // Create suggestion box
 const suggestionBox = document.createElement("div");
 suggestionBox.classList.add("suggestions");

@@ -11,6 +11,20 @@ todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
 filterOption.addEventListener("click", filterTodo);
 
+//navbar on off
+
+const navdiv = document.querySelector(".navonoff");
+const navtoggle = document.querySelector("#checkbox2");
+const navlist = document.querySelector(".navlist");
+
+navtoggle.addEventListener("change", () => {
+  if (navtoggle.checked) {
+    navlist.style.right = "-150px";
+  } else {
+    navlist.style.right = "-400px";
+  }
+});
+
 //Function
 
 function addTodo(event) {

@@ -47,8 +47,8 @@
             <h1>tastyTrack</h1>
           </div>
           <ul class="navlist flex">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="todo.html" class="active">Recipe To-Do</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="todo.html">Recipe To-Do</a></li>
             <li><a href="Recipe.html">Find-Recipes</a></li>
             <li><a href="/">Contact Us</a></li>
           </ul>
@@ -83,14 +83,16 @@
 
     <div class="todo-display-result">
       <form>
-        <input
-          type="text"
-          class="todo-input"
-          placeholder="Search Ingredient here "
-        />
-        <button class="todo-button" type="submit">
-          <i class="fas fa-plus-square"></i>
-        </button>
+        <div class="todo-input-btn">
+          <input
+            type="text"
+            class="todo-input"
+            placeholder="Search Ingredient here "
+          />
+          <button class="todo-button" type="submit">
+            <i class="fas fa-plus-square"></i>
+          </button>
+        </div>
         <div class="select">
           <select name="todo" class="filter-todo">
             <option value="all">All</option>
@@ -176,7 +178,7 @@
         </div>
       </div>
     </footer>
-    <script src="js/script.js"></script>
-    <script src="js/todo.js"></script>
+    <script src="/js/todo.js"></script>
+    <script src="/js/script.js"></script>
   </body>
 </html>
