@@ -64,7 +64,7 @@ header {
 }
 
 .active {
-  color: #85b72c;
+  color: var(--main-color);
   transition: all 1s ease;
 }
 .topnav .container {
