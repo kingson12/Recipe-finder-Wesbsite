@@ -197,6 +197,7 @@ header {
   display: flex;
   gap: 20px;
   margin-right: 15px;
+  pointer-events: none;
 }
 
 .searchbar {
