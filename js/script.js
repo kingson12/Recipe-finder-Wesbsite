@@ -3,7 +3,7 @@
 const posts = [
   {
     title: "Discover & Organize Your Favorite Recipes",
-    desc: " Find delicious recipes in seconds and keep track of your meal ideas effortlessly. Whether you're searching for the perfect dish or planning your next meal, we've got you covered. Explore, cook, and stay organized—all in one place!",
+    desc: " Find delicious recipes in seconds and keep track of your meal ideas effortlessly. Whether you're searching for the perfect dish or planning your next meal, we've got you covered.",
     link: "https://google.com/",
     bgImg: "images/dish-3.jpg",
     label: "cookies",
@@ -25,7 +25,7 @@ const posts = [
   },
   {
     title: "Discover & Organize Your Favorite Recipes",
-    desc: " Find delicious recipes in seconds and keep track of your meal ideas effortlessly. Whether you're searching for the perfect dish or planning your next meal, we've got you covered. Explore, cook, and stay organized—all in one place!",
+    desc: " Find delicious recipes in seconds and keep track of your meal ideas effortlessly. Whether you're searching for the perfect dish or planning your next meal, we've got you covered.",
     bgImg: "images/1.jpg",
   },
   {
@@ -40,7 +40,7 @@ const posts = [
   },
   {
     title: "Discover & Organize Your Favorite Recipes",
-    desc: " Find delicious recipes in seconds and keep track of your meal ideas effortlessly. Whether you're searching for the perfect dish or planning your next meal, we've got you covered. Explore, cook, and stay organized—all in one place!",
+    desc: " Find delicious recipes in seconds and keep track of your meal ideas effortlessly. Whether you're searching for the perfect dish or planning your next meal, we've got you covered.",
     bgImg: "images/4.jpg",
   },
   {
@@ -55,7 +55,7 @@ const posts = [
   },
   {
     title: "Discover & Organize Your Favorite Recipes",
-    desc: " Find delicious recipes in seconds and keep track of your meal ideas effortlessly. Whether you're searching for the perfect dish or planning your next meal, we've got you covered. Explore, cook, and stay organized—all in one place!",
+    desc: " Find delicious recipes in seconds and keep track of your meal ideas effortlessly. Whether you're searching for the perfect dish or planning your next meal, we've got you covered.",
     bgImg: "images/7.jpg",
   },
   {
@@ -70,7 +70,7 @@ const posts = [
   },
   {
     title: "Discover & Organize Your Favorite Recipes",
-    desc: " Find delicious recipes in seconds and keep track of your meal ideas effortlessly. Whether you're searching for the perfect dish or planning your next meal, we've got you covered. Explore, cook, and stay organized—all in one place!",
+    desc: " Find delicious recipes in seconds and keep track of your meal ideas effortlessly. Whether you're searching for the perfect dish or planning your next meal, we've got you covered.",
     bgImg: "images/10.jpg",
   },
   {
@@ -85,7 +85,7 @@ const posts = [
   },
   {
     title: "Discover & Organize Your Favorite Recipes",
-    desc: " Find delicious recipes in seconds and keep track of your meal ideas effortlessly. Whether you're searching for the perfect dish or planning your next meal, we've got you covered. Explore, cook, and stay organized—all in one place!",
+    desc: " Find delicious recipes in seconds and keep track of your meal ideas effortlessly. Whether you're searching for the perfect dish or planning your next meal, we've got you covered.",
     bgImg: "images/13.jpg",
   },
 ];
