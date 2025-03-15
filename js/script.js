@@ -1,5 +1,6 @@
 //slider header
 
+//details array
 const posts = [
   {
     title: "Discover & Organize Your Favorite Recipes",
