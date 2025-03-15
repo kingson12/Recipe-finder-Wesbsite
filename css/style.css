@@ -202,7 +202,6 @@ header {
 .searchbar {
   font-size: 25px;
   color: #555;
-  cursor: pointer;
 }
 
 .searchbar i:hover {
@@ -213,6 +212,7 @@ header {
 
 .navonoff {
   display: none; /*display block when width is 500px in js*/
+  cursor: pointer;
 }
 
 #checkbox2 {
@@ -548,7 +548,6 @@ header {
   font-size: 15px;
   font-weight: 600;
 }
-
 
 .headercards {
   width: 100%;
