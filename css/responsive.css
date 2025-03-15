@@ -15,16 +15,10 @@
     transition: 0.3s ease-in-out;
   }
 
-  .dark .navlist {
-    background-color: #363636;
-  }
-
   .navonoff {
     display: block;
   }
-  .dark .bar {
-    background-color: #ffffffd6;
-  }
+
   .headerimg {
     height: 70vh;
     padding: 0 20px;
