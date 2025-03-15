@@ -1234,10 +1234,12 @@ header {
   font-size: 42px;
   line-height: 48px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .leftboxtitle p {
   color: #222;
+  text-align: center;
   font-size: 14px;
   font-weight: 700;
   max-width: 600px;
