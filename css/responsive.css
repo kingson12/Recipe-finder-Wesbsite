@@ -120,6 +120,14 @@
     margin-top: 3rem;
   }
 
+  .subscribeinfo h1 {
+    font-size: 32px;
+  }
+
+  .subscribeinfo p {
+    width: 100%;
+  }
+
   footer .container {
     padding: 0 20px;
   }
