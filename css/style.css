@@ -939,6 +939,7 @@ header {
 .featuredtitles h1 {
   font-size: 45px;
   color: #1d2228;
+  text-align: center;
 }
 
 .featuredtitles p {
