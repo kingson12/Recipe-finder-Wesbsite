@@ -9,16 +9,25 @@ let add = document.getElementById("add");
 
 //navbar on off
 
-const navdiv = document.querySelector(".navonoff");
 const navtoggle = document.querySelector("#checkbox2");
 const navlist = document.querySelector(".navlist");
+const overlay = document.querySelector("#overlay");
 
 navtoggle.addEventListener("change", () => {
   if (navtoggle.checked) {
     navlist.style.right = "-150px";
+    overlay.style.display = "block"; // Show overlay
   } else {
     navlist.style.right = "-400px";
+    overlay.style.display = "none"; // Hide overlay
   }
+});
+
+// Hide navbar when clicking on the overlay
+overlay.addEventListener("click", () => {
+  navtoggle.checked = false;
+  navlist.style.right = "-400px";
+  overlay.style.display = "none";
 });
 
 //  form

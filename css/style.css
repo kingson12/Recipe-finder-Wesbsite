@@ -50,6 +50,7 @@ html {
 }
 
 header {
+  position: relative;
   width: 100%;
   height: auto;
   z-index: 9999;
@@ -61,6 +62,7 @@ header {
   background-color: #133a18;
   color: white;
   padding: 30px 10px;
+  z-index: 9999;
 }
 
 .active {
@@ -1813,4 +1815,16 @@ footer h5 {
     width: 324px;
     height: 330px;
   }
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+  z-index: 978; /* Below navbar but above content */
+  display: none; /* Initially hidden */
+  transition: opacity 0.3s ease;
 }
