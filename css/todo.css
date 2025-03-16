@@ -35,6 +35,11 @@ h5 {
   font-size: 2rem;
   font-weight: bold;
 }
+
+.subscribeinfo h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
 .todo-name p {
   font-size: 1rem;
   font-weight: 300;

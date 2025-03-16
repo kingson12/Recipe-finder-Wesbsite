@@ -1608,3 +1608,7 @@ footer h5 {
   font-weight: 400;
   letter-spacing: 1px;
 }
+
+.logo .footer-logo-text {
+  color: white;
+}
