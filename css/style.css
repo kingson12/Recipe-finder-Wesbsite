@@ -1234,7 +1234,6 @@ header {
   font-size: 42px;
   line-height: 48px;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 .leftboxtitle p {
@@ -1631,7 +1630,9 @@ footer h5 {
     background-color: #eaeaea;
     transition: 0.3s ease-in-out;
   }
-
+  .leftboxtitle h1 {
+    text-align: center;
+  }
   .navonoff {
     display: block;
   }

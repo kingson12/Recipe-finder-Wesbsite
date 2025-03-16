@@ -1,5 +1,3 @@
-//slider header
-
 //details array
 const posts = [
   {

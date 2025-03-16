@@ -32,10 +32,12 @@
       href="images/favicon-16x16.png"
     />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <header>
-      <div class="topnav">
+      <div class="topnav" data-aos="fade-down" data-aos-duration="600">
         <div class="container flex">
           <div class="navicons flex">
             <a href="/"><i class="fa-brands fa-facebook-f"></i></a>
@@ -55,7 +57,12 @@
         </div>
       </div>
 
-      <div class="mainnav">
+      <div
+        class="mainnav"
+        data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="400"
+      >
         <div class="container flex">
           <div class="logo flex">
             <img src="images/logo.png" />
@@ -86,15 +93,27 @@
 
     <div class="loading hidden" id="loadingSpinner"></div>
     <main>
-      <div class="recipe-hero-container">
-        <h1>Find Meals For Your Ingredients</h1>
-        <p>
+      <div
+        class="recipe-hero-container"
+        data-aos="fade-up"
+        data-aos-duration="500"
+        data-aos-delay="700"
+      >
+        <h1 data-aos="fade-down" data-aos-duration="500" data-aos-delay="1000">
+          Find Meals For Your Ingredients
+        </h1>
+        <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="1300">
           Search for delicious recipes based on ingredients, cuisine, or meal
           type. Whether you're in the mood for something quick and easy or a
           gourmet dish, our recipe finder helps you discover the perfect meal in
           seconds.
         </p>
-        <div class="recipe-hero-search-container">
+        <div
+          class="recipe-hero-search-container"
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="1600"
+        >
           <input
             type="text"
             id="ingredientInput"
@@ -106,7 +125,12 @@
         <div class="result-grid" id="results"></div>
       </div>
 
-      <div class="popup" id="recipePopup">
+      <div
+        class="popup"
+        id="recipePopup"
+        data-aos="fade-up"
+        data-aos-duration="600"
+      >
         <div class="popup-content">
           <div class="popup-heading">
             <span id="closePopup" class="close-btn">X</span>
@@ -117,8 +141,8 @@
       </div>
     </main>
 
-    <section class="subscribeme">
-      <div class="subscribeinfo">
+    <section class="subscribeme" data-aos="fade-up" data-aos-duration="300">
+      <div class="subscribeinfo" data-aos="fade-up" data-aos-duration="600">
         <h1>Ready to Elevate Your Cooking Game?</h1>
         <p>
           Discover new flavors, save your favorite recipes, and organize your
@@ -191,6 +215,11 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="/js/recipe.js"></script>
     <script src="/js/script.js"></script>
   </body>
