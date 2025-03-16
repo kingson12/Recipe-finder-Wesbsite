@@ -1,15 +1,11 @@
 //selector
-
-const todoInput = document.querySelector(".todo-input");
-const todoButton = document.querySelector(".todo-button");
-const todoList = document.querySelector(".todo-list");
-const filterOption = document.querySelector(".filter-todo");
-
-//Event Listeners
-document.addEventListener("DOMContentLoaded", getTodos);
-todoButton.addEventListener("click", addTodo);
-todoList.addEventListener("click", deleteCheck);
-filterOption.addEventListener("click", filterTodo);
+let form = document.getElementById("form");
+let textInput = document.getElementById("textInput");
+let msg = document.getElementById("msg");
+let textarea = document.getElementById("textarea");
+let dateInput = document.getElementById("dateInput");
+let tasks = document.getElementById("tasks");
+let add = document.getElementById("add");
 
 //navbar on off
 
@@ -25,154 +21,82 @@ navtoggle.addEventListener("change", () => {
   }
 });
 
-//Function
+//  form
 
-function addTodo(event) {
-  //Prevent form from submitting
-  event.preventDefault();
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  formValidation();
+});
 
-  //Todo DIV
-  const todoDiv = document.createElement("div");
-  todoDiv.classList.add("todo");
-
-  //create Li
-  const newTodo = document.createElement("li");
-  newTodo.innerText = todoInput.value;
-  newTodo.classList.add("todo-item");
-  todoDiv.appendChild(newTodo);
-
-  //Add Todo to localstorage
-  saveLocalTodos(todoInput.value);
-  //Check mark button
-
-  const completedButton = document.createElement("button");
-  completedButton.innerHTML = `<i class = "fas fa-check"></i>`;
-  completedButton.classList.add("complete-btn");
-  todoDiv.appendChild(completedButton);
-
-  //Check trash button
-
-  const trashButton = document.createElement("button");
-  trashButton.innerHTML = `<i class = "fas fa-trash"></i>`;
-  trashButton.classList.add("trash-btn");
-  todoDiv.appendChild(trashButton);
-
-  //Append to List
-
-  todoList.appendChild(todoDiv);
-
-  //clear todo input value
-  todoInput.value = "";
-}
-
-function deleteCheck(e) {
-  const item = e.target;
-  //Delete Todo
-  if (item.classList[0] === "trash-btn") {
-    const todo = item.parentElement;
-    //Animation
-    todo.classList.add("fall");
-    removeLocalTodos(todo);
-    todo.addEventListener("transitionend", () => {
-      todo.remove();
-    });
+let formValidation = () => {
+  if (textInput.value === "") {
+    msg.innerHTML = "Task cannot be blank";
+  } else {
+    msg.innerHTML = "";
+    acceptData();
+    add.setAttribute("data-bs-dismiss", "modal");
+    add.click();
+    (() => {
+      add.setAttribute("data-bs-dismiss", "");
+    })();
   }
+};
 
-  //CheckMark
-  if (item.classList[0] === "complete-btn") {
-    const todo = item.parentElement;
-    todo.classList.toggle("completed");
-  }
-}
+let data = [];
 
-function filterTodo(e) {
-  const todos = todoList.childNodes;
-  todos.forEach(function (todo) {
-    switch (e.target.value) {
-      case "all":
-        todo.style.display = "flex";
-        break;
-
-      case "completed":
-        if (todo.classList.contains("completed")) {
-          todo.style.display = "flex";
-        } else {
-          todo.style.display = "none";
-        }
-        break;
-      case "uncompleted":
-        if (!todo.classList.contains("completed")) {
-          todo.style.display = "flex";
-        } else {
-          todo.style.display = "none";
-        }
-        break;
-    }
+let acceptData = () => {
+  data.push({
+    text: textInput.value,
+    date: dateInput.value,
+    description: textarea.value,
   });
-}
 
-function saveLocalTodos(todo) {
-  //CHECK-- HEY DO i already have thing in there?
-  let todos;
-  if (localStorage.getItem("todos") === null) {
-    todos = [];
-  } else {
-    todos = JSON.parse(localStorage.getItem("todos"));
-  }
-  todos.push(todo);
-  localStorage.setItem("todos", JSON.stringify(todos));
-}
+  localStorage.setItem("data", JSON.stringify(data));
 
-function getTodos() {
-  //CHECK-- HEY DO i already have thing in there?
-  let todos;
-  if (localStorage.getItem("todos") === null) {
-    todos = [];
-  } else {
-    todos = JSON.parse(localStorage.getItem("todos"));
-  }
-  localStorage.setItem("todos", JSON.stringify(todos));
+  createTasks();
+};
 
-  todos.forEach(function (todo) {
-    //Todo DIV
-    const todoDiv = document.createElement("div");
-    todoDiv.classList.add("todo");
+let createTasks = () => {
+  tasks.innerHTML = "";
+  data.map((x, y) => {
+    return (tasks.innerHTML += `            <div  id=${y}>
+            <span class="fw-bold">${x.text}</span>
+            <span class="small text-secondary">${x.date}</span>
+            <p>${x.description}</p>
 
-    //create Li
-    const newTodo = document.createElement("li");
-    newTodo.innerText = todo;
-    newTodo.classList.add("todo-item");
-    todoDiv.appendChild(newTodo);
-
-    //Check mark button
-
-    const completedButton = document.createElement("button");
-    completedButton.innerHTML = `<i class = "fas fa-check"></i>`;
-    completedButton.classList.add("complete-btn");
-    todoDiv.appendChild(completedButton);
-
-    //Check trash button
-
-    const trashButton = document.createElement("button");
-    trashButton.innerHTML = `<i class = "fas fa-trash"></i>`;
-    trashButton.classList.add("trash-btn");
-    todoDiv.appendChild(trashButton);
-
-    //Append to List
-
-    todoList.appendChild(todoDiv);
+            <span class="options">
+                <i  data-bs-toggle="modal" data-bs-target="#form" onClick ="editTask(this)"  class="fas fa-edit"></i>
+                <i onClick ="deleteTask(this);createTasks()" class="fas fa-trash-alt"></i>
+            </span>
+        </div>`);
   });
-}
 
-function removeLocalTodos(todo) {
-  //CHECK-- HEY DO i already have thing in there?
-  let todos;
-  if (localStorage.getItem("todos") === null) {
-    todos = [];
-  } else {
-    todos = JSON.parse(localStorage.getItem("todos"));
-  }
-  const todoIndex = todo.children[0].innerText;
-  todos.splice(todos.indexOf(todoIndex), 1);
-  localStorage.setItem("todo", JSON.stringify(todos));
-}
+  resetForm();
+};
+
+let deleteTask = (e) => {
+  e.parentElement.parentElement.remove();
+  data.splice(e.parentElement.parentElement.id, 1);
+  localStorage.setItem("data", JSON.stringify(data));
+  console.log(data);
+};
+
+let editTask = (e) => {
+  let selected = e.parentElement.parentElement;
+  textInput.value = selected.children[0].innerHTML;
+  dateInput.value = selected.children[1].innerHTML;
+  textarea.value = selected.children[2].innerHTML;
+
+  deleteTask(e);
+};
+
+let resetForm = () => {
+  textInput.value = "";
+  dateInput.value = "";
+  textarea.value = "";
+};
+
+(() => {
+  data = JSON.parse(localStorage.getItem("data")) || [];
+  createTasks();
+})();
