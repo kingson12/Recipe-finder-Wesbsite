@@ -68,57 +68,158 @@ h5 {
 }
 
 .app {
-  width: 50%;
+  width: 100%;
+  max-width: 500px;
+  min-width: 280px;
   height: auto;
   border: 5px solid #4caf50;
   border-radius: 8px;
   padding: 15px;
   background-color: #fff;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
-.app::-webkit-scrollbar {
-  width: 0 !important;
-}
+/* Task Input Box */
 #addNew {
   display: flex;
-  background-color: rgba(171, 206, 161, 0.35);
   align-items: center;
   justify-content: space-between;
-  padding: 5px 10px;
+  background: #4caf50;
+  color: rgba(255, 255, 255, 0.712);
+  padding: 10px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
-.fa-plus {
-  background-color: #abc;
-  padding: 3px;
-  border-radius: 3px;
+#addNew:hover {
+  background: #388e3c;
 }
 
-#tasks {
-  display: grid;
-  gap: 14px;
+#addNew .placeText {
+  font-size: 14px;
 }
 
+#addNew i {
+  font-size: 18px;
+}
+
+/* Task List Items */
 #tasks div {
   background-color: #e2eede;
   border: 2px solid #abc;
-  padding: 5px;
+  padding: 10px;
+  margin-top: 10px;
   border-radius: 6px;
-  display: grid;
-  gap: 4px;
+  display: block;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
 }
 
+/* Task Title */
+#tasks span.fw-bold {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Task Date */
+#tasks span.small {
+  display: block;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Task Description */
+#tasks p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  color: #444;
+}
+
+/* Task Actions */
 .options {
-  justify-self: center;
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 .options i {
   cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
 }
+
+.options i.fas.fa-edit {
+  color: #4caf50;
+}
+
+.options i.fas.fa-trash-alt {
+  color: #d32f2f;
+}
+
+.options i:hover {
+  transform: scale(1.1);
+}
+
 #msg {
   color: red;
+}
+
+/* Modal Form */
+.modal-content {
+  border-radius: 8px;
+}
+
+.modal-header {
+  background: #4caf50;
+  color: white;
+  border-radius: 8px 8px 0 0;
+}
+
+.modal-body p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.meal-two-btn a:hover {
+  background: #388e3c;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .app {
+    width: 90%;
+    min-width: 250px;
+  }
+
+  .todo-name h1 {
+    font-size: 24px;
+  }
+
+  .todo-name p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    width: 95%;
+    min-width: 230px;
+  }
+
+  .todo-name h1 {
+    font-size: 22px;
+  }
+
+  .todo-name p {
+    font-size: 13px;
+  }
 }
