@@ -199,27 +199,11 @@ h5 {
     width: 90%;
     min-width: 250px;
   }
-
-  .todo-name h1 {
-    font-size: 24px;
-  }
-
-  .todo-name p {
-    font-size: 14px;
-  }
 }
 
 @media (max-width: 480px) {
   .app {
     width: 95%;
     min-width: 230px;
-  }
-
-  .todo-name h1 {
-    font-size: 22px;
-  }
-
-  .todo-name p {
-    font-size: 13px;
   }
 }
