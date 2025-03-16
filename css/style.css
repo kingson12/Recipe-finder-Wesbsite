@@ -1559,8 +1559,10 @@ footer .container {
 
 .footerlogo p {
   width: 60%;
+  letter-spacing: 1px;
   font-size: 14px;
-  color: #999;
+  color: #e4e4e4;
+  margin-bottom: 4px;
 }
 
 .fsocial {
