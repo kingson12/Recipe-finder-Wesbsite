@@ -91,7 +91,8 @@ const posts = [
 
 let currentSlide = 0;
 
-function showSlide(slideIndex) {
+//Slide show  Function
+let showSlide = (slideIndex) => {
   const slide = posts[slideIndex];
   document.querySelector(".headertitle").textContent = slide.title;
   document.querySelector(".headerpera").textContent = slide.desc;
@@ -99,7 +100,7 @@ function showSlide(slideIndex) {
   document.querySelector(
     ".headerimg"
   ).style.background = `url(${slide.bgImg}) no-repeat center center/cover`;
-}
+};
 
 // initial slide
 showSlide(currentSlide);
@@ -108,11 +109,11 @@ showSlide(currentSlide);
 
 const headerPosts = document.querySelector(".headercards");
 
-function nextSlide() {
+let nextSlide = () => {
   currentSlide = (currentSlide + 1) % posts.length;
   showSlide(currentSlide);
   // headerPosts(currentSlide);
-}
+};
 
 // change slide every 3 seconds
 
@@ -158,7 +159,7 @@ overlay.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".counter");
 
-  function runCounter() {
+  let runCounter = () => {
     counters.forEach((counter) => {
       counter.innerText = "0"; // Reset counter to 0
 
@@ -176,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
       updateCount();
     });
-  }
+  };
 
   // Run the counter initially
   runCounter();

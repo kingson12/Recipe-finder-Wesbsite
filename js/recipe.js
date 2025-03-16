@@ -1,4 +1,4 @@
-// Cache elements
+// Select elements
 const searchBtn = document.getElementById("searchBtn");
 const ingredientInput = document.getElementById("ingredientInput");
 const results = document.getElementById("results");

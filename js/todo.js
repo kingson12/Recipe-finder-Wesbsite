@@ -37,6 +37,7 @@ form.addEventListener("submit", (e) => {
   formValidation();
 });
 
+//Form validation
 let formValidation = () => {
   if (textInput.value === "") {
     msg.innerHTML = "Task cannot be blank";
@@ -52,7 +53,7 @@ let formValidation = () => {
 };
 
 let data = [];
-
+//Accepted data
 let acceptData = () => {
   data.push({
     text: textInput.value,
@@ -60,10 +61,13 @@ let acceptData = () => {
     description: textarea.value,
   });
 
+  //Set Item to local storage
   localStorage.setItem("data", JSON.stringify(data));
 
   createTasks();
 };
+
+//Create Task Function
 
 let createTasks = () => {
   tasks.innerHTML = "";
@@ -83,6 +87,7 @@ let createTasks = () => {
   resetForm();
 };
 
+//Delete Task Function
 let deleteTask = (e) => {
   e.parentElement.parentElement.remove();
   data.splice(e.parentElement.parentElement.id, 1);
@@ -90,6 +95,7 @@ let deleteTask = (e) => {
   console.log(data);
 };
 
+//Edit Task Function
 let editTask = (e) => {
   let selected = e.parentElement.parentElement;
   textInput.value = selected.children[0].innerHTML;
@@ -99,6 +105,7 @@ let editTask = (e) => {
   deleteTask(e);
 };
 
+//Reset Form
 let resetForm = () => {
   textInput.value = "";
   dateInput.value = "";
