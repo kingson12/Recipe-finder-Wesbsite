@@ -885,6 +885,10 @@ header {
   transition: 0.3 ease-in-out;
 }
 
+.fa-arrow-right {
+  margin-left: 5px;
+}
+
 .filtercards {
   gap: 25px;
 }
