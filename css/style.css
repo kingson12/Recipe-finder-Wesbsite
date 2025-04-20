@@ -1820,8 +1820,3 @@ footer h5 {
   transition: opacity 0.5s ease;
   opacity: 1;
 }
-
-#preloader.hidden {
-  opacity: 0;
-  pointer-events: none;
-}

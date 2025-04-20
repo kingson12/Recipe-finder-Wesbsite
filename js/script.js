@@ -191,10 +191,5 @@ document.addEventListener("DOMContentLoaded", () => {
 let loader = document.getElementById("preloader");
 
 window.addEventListener("load", function () {
-  setTimeout(() => {
-    loader.classList.add("hidden");
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 500); // match the fade-out transition time
-  }, 1500);
+  loader.style.display = "none";
 });
