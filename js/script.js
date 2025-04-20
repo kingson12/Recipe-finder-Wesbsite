@@ -185,3 +185,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Repeat the counter animation every 3 minutes (180,000 milliseconds)
   setInterval(runCounter, 10000);
 });
+
+// Preloader Animation
+
+let loader = document.getElementById("preloader");
+
+window.addEventListener("load", function () {
+  setTimeout(() => {
+    loader.classList.add("hidden");
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 500); // match the fade-out transition time
+  }, 1500);
+});
