@@ -96,7 +96,6 @@ let showSlide = (slideIndex) => {
   const slide = posts[slideIndex];
   document.querySelector(".headertitle").textContent = slide.title;
   document.querySelector(".headerpera").textContent = slide.desc;
-  document.querySelector(".headerbtn").href = slide.link;
   document.querySelector(
     ".headerimg"
   ).style.background = `url(${slide.bgImg}) no-repeat center center/cover`;
